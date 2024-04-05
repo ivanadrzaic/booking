@@ -1,3 +1,8 @@
-import { Routes } from '@angular/router';
+import { Route } from '@angular/router';
 
-export const routes: Routes = [];
+import { AppLayoutComponent } from './app-layout/app-layout.component';
+
+export const ROUTES: Route[] = [
+    { path: 'home', component: AppLayoutComponent },
+    { path: '**', redirectTo: '/home/' }
+];
